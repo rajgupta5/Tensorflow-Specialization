@@ -4,7 +4,7 @@ import numpy as np
 import seaborn as sns
 
 
-basepath = '/Users/rajkgupta/Downloads/examples/clusters/'
+basepath = '/Users/rajkgupta/Downloads/data/examples/clusters/'
 
 train_df = pd.read_csv(basepath + 'train.csv')
 test_df = pd.read_csv(basepath + 'test.csv')

@@ -27,12 +27,13 @@ model = Sequential()
 model.add(Dense(10, activation='relu', kernel_initializer='he_normal', input_shape=(n_features,)))
 model.add(Dense(8, activation='relu', kernel_initializer='he_normal'))
 model.add(Dense(1, activation='sigmoid'))
+print(model.summary())
 # compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 # fit the model
-model.fit(X_train, y_train, epochs=150, batch_size=32, verbose=0)
+model.fit(X_train, y_train, epochs=150, batch_size=32, verbose=1)
 # evaluate the model
-loss, acc = model.evaluate(X_test, y_test, verbose=0)
+loss, acc = model.evaluate(X_test, y_test, verbose=1)
 print('Test Accuracy: %.3f' % acc)
 # make a prediction
 row = [1,0,0.99539,-0.05889,0.85243,0.02306,0.83398,-0.37708,1,0.03760,0.85243,-0.17755,0.59755,-0.44945,0.60536,-0.38223,0.84356,-0.38542,0.58212,-0.32192,0.56971,-0.29674,0.36946,-0.47357,0.56811,-0.51171,0.41078,-0.46168,0.21266,-0.34090,0.42267,-0.54487,0.18641,-0.45300]

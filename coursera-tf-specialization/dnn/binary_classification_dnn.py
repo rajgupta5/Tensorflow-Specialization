@@ -4,7 +4,7 @@ import numpy as np
 import seaborn as sns
 
 
-basepath = '/Users/rajkgupta/Downloads/examples/quadratic/'
+basepath = '/Users/rajkgupta/Downloads/data/examples/quadratic/'
 train_df = pd.read_csv(basepath + 'train.csv')
 test_df = pd.read_csv(basepath + 'test.csv')
 

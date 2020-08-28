@@ -43,7 +43,7 @@ model = Sequential([
     Dense(10, activation=tf.nn.softmax)
 ])
 
-model.compile(optimizer=Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.compile(optimizer=tf.keras.optimizers.SGD, loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 print(model.summary())
 
 history = model.fit(training_images, training_labels, epochs=10, callbacks=myCallback(), validation_split=0.2)
